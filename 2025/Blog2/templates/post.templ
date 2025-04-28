@@ -1,0 +1,20 @@
+package templates
+
+import "github.com/Spatacoli/blog2/models"
+
+templ Post(post models.Post) {
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{post.Title}</title>
+	</head>
+	<body>
+		<h1>{post.Title}</h1>
+		<p>By {post.Author} on {post.Date.Format("January 2, 2006")}</p>
+		<div class="content">
+			{post.Content}
+		</div>
+	</body>
+	</html>
+}
